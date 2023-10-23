@@ -37,7 +37,7 @@ const server = http.createServer((req, res) => {
   if (parsedUrl.pathname === '/') {
     mainPage(req,res);
   }
-  else if (url === '/kontakt' && method === 'POST'){
+  else if (parsedUrl.pathname === '/kontakt' && method === 'POST'){
     const body = []
     req.on('data', (chunk) => {
         body.push(chunk);
